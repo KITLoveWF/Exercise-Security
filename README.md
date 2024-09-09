@@ -23,5 +23,8 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$>gcc -g bof1.c -o bof1.out -fno-stack-protector -mpreferred-stack-boundary=2` <br>
 7.Load vuln.out in gdb <br>
 `$> gdb -q bof1.out` <br>
-8. 
+8. Get the secretFunc function address <br>
+`$> disas secretFunc`
+[SecretFuncAddress](https://github.com/KITLoveWF/Exercise-Security/blob/main/secretFuncAddress.png)
+
    
