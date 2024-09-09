@@ -11,7 +11,7 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
 `Seclabs` is created inside student's home folder
 ### Visualize the initial attack idea
-<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/stackframe.png" />
+<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/stackframe.png" /> <br>
 ### Conducting the attack
 1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
 `$> mdkir bof` <br>
