@@ -15,5 +15,13 @@ The Dockerfile is used to build docker image with full required packages for Han
 2. Open terminal<br>
 `$> cd seclabs` <br>
 `$> cd bof` <br>
-3. 
+3. Run code command. to open visual studio in terminal <br>
+4. Run docker container from previously built image <br>
+5. Run this command to create file bof1.out<br>
+`$>gcc -g bof1.c -o bof1.out`<br>
+6. Compile program with options to code execution on stack <br>
+`$>gcc -g bof1.c -o bof1.out -fno-stack-protector -mpreferred-stack-boundary=2` <br>
+7.Load vuln.out in gdb <br>
+`$> gdb -q bof1.out` <br>
+8. 
    
