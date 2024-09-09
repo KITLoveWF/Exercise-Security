@@ -8,3 +8,8 @@ The Dockerfile is used to build docker image with full required packages for Han
 3. Run docker container from previously built image <br> 
 `$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
 `Seclabs` is created inside student's home folder
+4. After creating the seclabs folder, continue to create a folder named bof in seclabs
+`$> mdkir bof` <br>
+5. Open terminal
+`$> cd seclabs` <br>
+`$> cd bof` <br>
