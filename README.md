@@ -116,10 +116,10 @@ The Dockerfile is used to build docker image with full required packages for Han
 `Seclabs` is created inside student's home folder
 
 ### Visualize the initial attack idea
-Function: vuln and main
+Function: vuln and main <br>
 ![image](https://github.com/user-attachments/assets/9c37ba1d-1c92-48e9-9256-af83e1bf88c1)
 
-Function: myFunc
+Function: myFunc <br>
 ![image](https://github.com/user-attachments/assets/040e1510-9bf6-4c84-b0a0-2fc1b60d0341)
 
 
