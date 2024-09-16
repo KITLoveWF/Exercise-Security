@@ -1,6 +1,6 @@
-# Exercise-Security Lab bof1
 
 
+## Exercise-Security Lab bof1
 ### Prepare for the lab environment:
 The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
 **How to use:**<br>
@@ -38,9 +38,27 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$> echo $(python -c "print('a'*204+'\x6b\x84\x04\x08')") | ./bof1.out 1` <br>
 <img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/result1.png" /> <br>
 
-# Exercise-Security Lab bof2
+## Exercise-Security Lab bof2
+### Prepare for the lab environment:
+The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
+**How to use:**<br>
+1. Install docker on your computer (host machine) <br>
+2. Build the image "img4lab" that comprises all required packages for labs <br>
+`$> docker build -t img4lab .` to build docker image <br>
+3. Run docker container from previously built image <br> 
+`$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
+`Seclabs` is created inside student's home folder
 
-# Exercise-Security Lab bof3
+## Exercise-Security Lab bof3
+### Prepare for the lab environment:
+The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
+**How to use:**<br>
+1. Install docker on your computer (host machine) <br>
+2. Build the image "img4lab" that comprises all required packages for labs <br>
+`$> docker build -t img4lab .` to build docker image <br>
+3. Run docker container from previously built image <br> 
+`$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
+`Seclabs` is created inside student's home folder
 
 
    
