@@ -13,7 +13,6 @@ The Dockerfile is used to build docker image with full required packages for Han
 `Seclabs` is created inside student's home folder
 ### Visualize the initial attack idea
 <img align="center" width=auto height=auto src="https://raw.githubusercontent.com/KITLoveWF/Exercise-Security/main/stackframe.png" /> <br>
-![image](https://github.com/user-attachments/assets/e77fc665-25ba-44a2-8082-b0075633236f)
 
 ### Conducting the attack
 1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
@@ -51,6 +50,8 @@ The Dockerfile is used to build docker image with full required packages for Han
 3. Run docker container from previously built image <br> 
 `$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
 `Seclabs` is created inside student's home folder
+### Visualize the initial attack idea
+![image](https://github.com/user-attachments/assets/e77fc665-25ba-44a2-8082-b0075633236f)
 
 ## Exercise-Security Lab bof3
 ### Prepare for the lab environment:
@@ -62,6 +63,9 @@ The Dockerfile is used to build docker image with full required packages for Han
 3. Run docker container from previously built image <br> 
 `$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
 `Seclabs` is created inside student's home folder
+### Visualize the initial attack idea
+![image](https://github.com/user-attachments/assets/085fefae-1b34-4858-8c32-20a934d187a4)
+
 
 
    
