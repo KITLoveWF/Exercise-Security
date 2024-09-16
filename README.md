@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/122a4b8a-c8bc-4c72-ace5-58051d9a82d8)## @author:Mai Đức Kiên
+## @author:Mai Đức Kiên
 ## @Id:22110046
 
 ## Exercise-Security Lab bof1
