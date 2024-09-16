@@ -1,4 +1,4 @@
-## @author:Mai Đức Kiên
+![image](https://github.com/user-attachments/assets/122a4b8a-c8bc-4c72-ace5-58051d9a82d8)## @author:Mai Đức Kiên
 ## @Id:22110046
 
 ## Exercise-Security Lab bof1
@@ -116,6 +116,30 @@ The Dockerfile is used to build docker image with full required packages for Han
 `Seclabs` is created inside student's home folder
 
 ### Visualize the initial attack idea
+
+![image](https://github.com/user-attachments/assets/9c37ba1d-1c92-48e9-9256-af83e1bf88c1)
+
+### Conducting the attack
+1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
+`$> mdkir bof` <br>
+2. Open terminal<br>
+`$> cd seclabs` <br>
+`$> cd bof` <br>
+3. Run code command. to open visual studio in terminal <br>
+4. Run docker container from previously built image <br>
+5. Run this command to create file bof1.out<br>
+`$>gcc -g ctf.c -o ctf.out`<br>
+6. Compile program with options to code execution on stack <br>
+`$>gcc -g ctf.c -o ctf.out -fno-stack-protector -mpreferred-stack-boundary=2` <br>
+7. Load vuln.out in gdb <br>
+`$> gdb -q ctf.out` <br>
+8. Get the myFunc function address <br>
+`$> disas myFunc` <br>
+![image](https://github.com/user-attachments/assets/7e128f35-fce5-40b9-a216-8648424b1849)
+9.create file flag1.txt
+
+
+
 
 
 
