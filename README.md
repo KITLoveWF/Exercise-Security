@@ -136,7 +136,9 @@ The Dockerfile is used to build docker image with full required packages for Han
 8. Get the myFunc function address <br>
 `$> disas myFunc` <br>
 ![image](https://github.com/user-attachments/assets/7e128f35-fce5-40b9-a216-8648424b1849)
-9.create file flag1.txt
+9. Create file flag1.txt <br>
+![image](https://github.com/user-attachments/assets/563fd6da-3ba2-4729-8f73-4bbc74a31a21)
+
 
 
 
