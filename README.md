@@ -147,6 +147,18 @@ Function: myFunc <br>
 ![image](https://github.com/user-attachments/assets/bf331aa5-c5b0-4b53-a123-8dbe194a376f)
 
 
+## Exercise-Security File Del
+### Prepare for the lab environment:
+The Dockerfile is used to build docker image with full required packages for Hands-On Assembly & Security labs. <br>
+**How to use:**<br>
+1. Install docker on your computer (host machine) <br>
+2. Build the image "img4lab" that comprises all required packages for labs <br>
+`$> docker build -t img4lab .` to build docker image <br>
+3. Run docker container from previously built image <br> 
+`$> docker run -it --privileged -v $HOME/Seclabs:/home/seed/seclabs img4lab` <br>
+`Seclabs` is created inside student's home folder
+
+
 
 
 
